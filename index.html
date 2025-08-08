@@ -38,5 +38,23 @@
   <footer>
     <p>&copy; 2025 Bap. Crafted with code and controlled chaos.</p>
   </footer>
+
+  <footer>
+  <p>&copy; 2025 Bap. Crafted with code and controlled chaos.</p>
+  <p>Visitors so far: <span id="visitor-count">Loading...</span></p>
+</footer>
+
+<script>
+
+  fetch('https://api.countapi.xyz/hit/bapco.online/visits')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('visitor-count').textContent = data.value;
+    })
+    .catch(() => {
+      document.getElementById('visitor-count').textContent = 'N/A';
+    });
+</script>
+  
 </body>
 </html>
