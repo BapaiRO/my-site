@@ -41,11 +41,10 @@
 </footer>
 
 <script>
-
-  fetch('https://api.countapi.xyz/hit/bapco.online/visits')
-    .then(response => response.json())
+  fetch('https://visitor-counter.glitch.me/api/count/bapco-online')
+    .then(res => res.json())
     .then(data => {
-      document.getElementById('visitor-count').textContent = data.value;
+      document.getElementById('visitor-count').textContent = data.count;
     })
     .catch(() => {
       document.getElementById('visitor-count').textContent = 'N/A';
