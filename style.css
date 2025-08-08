@@ -1,0 +1,212 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --bg-color: #0a0a12;
+  --text-color: #e0e0e0;
+  --highlight-color: #00ffe7;
+  --accent-color: #ff00d0;
+  --glitch-color1: #00ffe7;
+  --glitch-color2: #ff00d0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #11111f;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--highlight-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0 0 0.5rem 0;
+  position: relative;
+}
+
+/* Glitch effect */
+.glitch {
+  color: var(--text-color);
+  position: relative;
+  font-weight: 700;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+  animation: glitchTop 1s infinite linear alternate-reverse;
+  color: var(--glitch-color1);
+  z-index: -1;
+  top: -2px;
+  left: 2px;
+  clip: rect(0, 100%, 45%, 0);
+}
+
+.glitch::after {
+  animation: glitchBottom 1s infinite linear alternate-reverse;
+  color: var(--glitch-color2);
+  z-index: -2;
+  top: 2px;
+  left: -2px;
+  clip: rect(55%, 100%, 100%, 0);
+}
+
+@keyframes glitchTop {
+  0% {
+    clip: rect(0, 100%, 45%, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(5px, 100%, 40px, 0);
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    clip: rect(10px, 100%, 45px, 0);
+    transform: translate(2px, 0);
+  }
+  60% {
+    clip: rect(0, 100%, 50px, 0);
+    transform: translate(-2px, 2px);
+  }
+  80% {
+    clip: rect(5px, 100%, 45px, 0);
+    transform: translate(2px, -1px);
+  }
+  100% {
+    clip: rect(0, 100%, 45%, 0);
+    transform: translate(0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip: rect(55%, 100%, 100%, 0);
+    transform: translate(0);
+  }
+  20% {
+    clip: rect(60%, 100%, 95%, 0);
+    transform: translate(2px, 2px);
+  }
+  40% {
+    clip: rect(55%, 100%, 90%, 0);
+    transform: translate(-2px, 0);
+  }
+  60% {
+    clip: rect(60%, 100%, 100%, 0);
+    transform: translate(2px, -2px);
+  }
+  80% {
+    clip: rect(55%, 100%, 95%, 0);
+    transform: translate(-2px, 1px);
+  }
+  100% {
+    clip: rect(55%, 100%, 100%, 0);
+    transform: translate(0);
+  }
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+nav a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--accent-color);
+}
+
+main {
+  flex-grow: 1;
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+section.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--accent-color);
+}
+
+section.intro p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+section.highlight {
+  background: rgba(255, 0, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow:
+    0 0 15px 3px rgba(255, 0, 255, 0.15),
+    0 0 10px 1px rgba(0, 255, 255, 0.3);
+}
+
+section.highlight h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+section.highlight p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  background: #11111f;
+  border-top: 1px solid var(--highlight-color);
+  color: #666;
+  letter-spacing: 1.2px;
+}
