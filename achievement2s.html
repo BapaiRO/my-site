@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Achievements</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bap's Achievements</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Quick default styles for easy start */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #eee;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #222;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0 0 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #eee;
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .achievement {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+    }
+
+    .achievement:hover {
+      transform: scale(1.03);
+    }
+
+    .achievement img {
+      width: 100%;
+      display: block;
+    }
+
+    .achievement-info {
+      padding: 15px;
+    }
+
+    .achievement-info h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #ffd700;
+    }
+
+    .achievement-info p {
+      margin: 5px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -28,31 +127,26 @@
     </section>
 
     <section class="achievements-grid">
-      <!-- Example achievement -->
+      <!-- Template for one achievement -->
       <article class="achievement">
-        <img src="images/example-achievement.jpg" alt="Achievement example" />
+        <img src="images/example-achievement.jpg" alt="Achievement Title">
         <div class="achievement-info">
-          
           <h3>First Roblox Game Release!</h3>
-          
-          <p>Published my first ever Roblox game, a chaos themed pvp game which has attracted 120k people in total to play</p>
-          
-          <p>While also working with big names on it! (Saxton Hale's Voice Actor from TF2)</p>
-          
+          <p>Published my first ever Roblox game, a chaos themed PvP game which has attracted 120k people in total to play.</p>
+          <p>Collaborated with big names! (Saxton Hale's voice actor from TF2!)</p>
         </div>
       </article>
 
-      <!-- Duplicate this block for more achievements -->
+      <!-- Duplicate this block for new achievements -->
       <article class="achievement">
-        <img src="images/example2.jpg" alt="Another achievement" />
+        <img src="images/example2.jpg" alt="Achievement Title">
         <div class="achievement-info">
-          
-          <h3>.</h3>
-          
-          <p>.</p>
-          
+          <h3>Another Achievement</h3>
+          <p>in the works</p>
         </div>
       </article>
+
+      
     </section>
   </main>
 
@@ -60,8 +154,6 @@
     <p>&copy; 2025 Bap. Certified.</p>
   </footer>
 </body>
-
 </html>
-
 
 
