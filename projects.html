@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects // BapCo</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-text">BapCo</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="whoami.html">Who Am I</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="achievement2s.html">Achievements</a>
+      <a href="portfolio.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section-shell">
+      <p class="kicker">field reports</p>
+      <h1>Projects</h1>
+      <p class="lead">A few systems and game ideas I’ve built, prototyped, or worked on. This page is written for clients, not just devs: clear, direct, and focused on what I actually made.</p>
+    </section>
+
+    <section class="project-list section-shell">
+      <article class="project-card">
+        <div class="project-label">Roblox</div>
+        <h2>Global Obby Sync</h2>
+        <p>Cross-server obby synchronization using MessagingService and MemoryStore. Built for global state updates, shared progress, and live server communication.</p>
+        <ul>
+          <li>MessagingService communication</li>
+          <li>MemoryStore-backed state</li>
+          <li>Server-safe update flow</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-label">Roblox / Combat</div>
+        <h2>Gun + Movement Framework</h2>
+        <p>A shooter-style system with sprinting, crouching, reloads, hit feedback, team-colored laser shots, headshot damage, and ammo UI.</p>
+        <ul>
+          <li>Client feedback for hits and damage</li>
+          <li>Server-authoritative damage</li>
+          <li>Animation states for sprint/crouch/shoot</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-label">Physics</div>
+        <h2>Rabbids-Style Cart System</h2>
+        <p>A physics-only cart controller inspired by Rabbids Go Home, focused on force, balance, and messy movement instead of direct character input.</p>
+        <ul>
+          <li>Physics-based movement</li>
+          <li>No direct player steering</li>
+          <li>Prototype-friendly controller</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-label">Horror / Game Mode</div>
+        <h2>Jason Voorhees Horror Mode</h2>
+        <p>A horror game mode concept with flare guns, dynamic lighting, pressure-based encounters, and tactical fear instead of cheap jumpscare spam.</p>
+        <ul>
+          <li>Mode structure</li>
+          <li>Lighting and player pressure</li>
+          <li>Weapon/tool interactions</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-label">Admin / Live Ops</div>
+        <h2>Global Troll Commands</h2>
+        <p>Global admin effects such as freeze, nuke, jail, and server-wide events with immediate response and clean command handling.</p>
+        <ul>
+          <li>Command parsing</li>
+          <li>Global effects</li>
+          <li>Live server feedback</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>BapCo © 2026. Every system has a story.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
